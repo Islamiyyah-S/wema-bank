@@ -178,7 +178,7 @@ width: 60%;
     font-weight: 600;
     cursor: pointer;
     align-self: flex-start;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 
 }
 .slider4left button:hover{
@@ -397,9 +397,14 @@ width: 60%;
   color: white;
   border: none;
   margin-top: 15px;
+  transition: all 1s ease;
+
 }
-.sme-btn svg {
-  fill: white;
+.sme-btn:hover{
+   background-color: transparent;
+  color: purple;
+  border: 1px solid #5A245E;
+   transform: scale(1);
 }
 .sme-card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -682,7 +687,7 @@ width: 60%;
 
 .blog-img-2 {
   width: 100%;
-  height: 220px; /* Fixed height for all images */
+  height: 220px; 
   overflow: hidden;
   position: relative;
 }
@@ -690,7 +695,7 @@ width: 60%;
 .blog-img-2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Makes all images same size */
+  object-fit: cover; 
   object-position: center;
   display: block;
 }
@@ -725,6 +730,7 @@ width: 60%;
   padding: 40px;
   display: flex;
   gap: 20px;
+  width: 100%;
 }
 .f-left{
 color: white;
@@ -766,9 +772,10 @@ width: 23%;
   color: white;
 }
 .footer-grid{
+  width: 70%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 13px;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 .footer-grid a{
   display: block;
@@ -816,14 +823,9 @@ width: 23%;
    .card-section {
     display: grid;
     grid-auto-flow: column;
-    /* Define a fixed width for the items so they don't shrink to 0 */
     grid-auto-columns: 80%; 
-    
-    /* Enable horizontal scrolling */
     overflow-x: auto;
     overscroll-behavior-x: contain;
-    
-    /* Optional: Improves the feel on mobile */
     scroll-snap-type: x mandatory;
     gap: 16px;
     padding: 20px;
@@ -864,6 +866,9 @@ width: 23%;
   height: 100%;
   object-fit: contain;
 }
+.star{
+  display: none;
+}
 .blog-content{
   flex-direction: column;
 }
@@ -871,6 +876,9 @@ width: 23%;
     grid-template-columns: repeat(1, 1fr);}
 .footer{
   flex-direction: column;
+}
+.footer-grid{
+  grid-template-columns: repeat(2,1fr);
 }
 }
 
